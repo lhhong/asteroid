@@ -10,6 +10,7 @@
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "dev": "npm test -- --watch",
     "lint": "eslint src test",
+    "prepare": "npm run clean && npm run build",
     "prepublish": "npm run clean && npm run build",
     "test": "env NODE_ENV=test env NODE_PATH=src _mocha --compilers js:babel-core/register --recursive test/unit",
     "start-meteor": "cd test/server/ && meteor",
